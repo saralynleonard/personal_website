@@ -43,12 +43,16 @@ section {
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
-    transform: translateX(400%);
+    transform: translateX(700%);
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip ellipsis;
     transition: transform .5s ease;
 }
 
 .box:nth-of-type(even) {
-    transform: translateX(-400%);
+    transform: translateX(-700%);
 }
 
 .box.show {
@@ -63,12 +67,18 @@ section {
 .title {
     color: #04f0b9;
     position: relative;
+    transition: all .2s ease;
 }
 
-.timeline {
-    margin: 20px auto;
-    padding: 20px;
-    width: 100%;
+.box .text {
+    color: #fff;
+    margin-top: 0;
+    height: 100%;
+    text-overflow: ellipsis;
+}
+
+.box:hover {
+    transform: scale(1.05);
 }
 
 /* .box::before {
